@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width,height=device-height,initial-scale=1.0"
+    />
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.ico"
+      alt="Icon-Aplus-Dessert"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Bookooma</title>
+    <script
+      src="https://kit.fontawesome.com/4ea95c46c0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="body">
+      <div class="container">
+        <div id="main" class="none">
+          <div class="wrapper-sec">
+            <div class="search-box">
+              <div>
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <input
+                type="text"
+                id="search-book"
+                placeholder="Cari buku anda..."
+                onkeydown="searchingBooks()"
+              />
+            </div>
+          </div>
+
+          <div id="search-section" class="none">
+            <div class="wrapper-sec">
+              <h1 id="title-search" class="title-search"></h1>
+            </div>
+            <div id="searched" class="wrapper"></div>
+          </div>
+          <div id="list-section" class="list-section">
+            <div class="wrapper-sec">
+              <h1>Belum Selesai Baca</h1>
+            </div>
+            <div id="inCompleted" class="wrapper"></div>
+          </div>
+          <div id="list-section-two" class="list-section">
+            <div class="wrapper-sec">
+              <h1>Sudah Selesai Baca</h1>
+            </div>
+            <div id="completed" class="wrapper"></div>
+          </div>
+        </div>
+        <div id="loading">
+          <div class="loader"></div>
+          <p>Loading...</p>
+        </div>
+      </div>
+    </div>
+    <div id="adding-section" class="none">
+      <div id="overlayed" class="bg-overlay"></div>
+      <div class="add-section">
+        <div class="box">
+          <h1>Tambah Buku</h1>
+          <form>
+            <div class="item-form">
+              <label>Judul</label>
+              <input
+                id="title"
+                type="text"
+                class="input"
+                placeholder="Masukkan Judul Buku"
+                onkeypress="onchageCreate()"
+              />
+              <p id="error-title" class="none">Masukkan Judul Buku</p>
+            </div>
+            <div class="item-form">
+              <label>Penulis</label>
+              <input
+                id="author"
+                class="input"
+                type="text"
+                placeholder="Masukkan Penulis Buku"
+                onkeypress="onchageCreate()"
+              />
+              <p id="error-author" class="none">Masukkan Penulis Buku</p>
+            </div>
+            <div class="item-form">
+              <label>Tahun</label>
+              <input
+                id="year"
+                type="number"
+                class="input"
+                placeholder="Masukkan Tahun Penerbitan Buku"
+                onkeypress="onchageCreate()"
+              />
+              <p id="error-year" class="none">Masukkan Tahun Penerbitan</p>
+            </div>
+            <div class="item-form">
+              <label>Selesai dibaca</label>
+              <input id="isCompleted" type="checkbox" />
+            </div>
+            <button id="save" class="save" type="button">Simpan</button>
+          </form>
+          <button id="cancel" class="cancel">Batal</button>
+        </div>
+      </div>
+    </div>
+    <div id="update-section" class="none">
+      <div id="overlayed" class="bg-overlay"></div>
+      <div class="add-section">
+        <div class="box">
+          <h1>Update Buku</h1>
+          <form>
+            <input id="id-update" type="hidden" />
+            <div class="item-form">
+              <label>Judul</label>
+              <input
+                id="title-update"
+                type="text"
+                class="input"
+                placeholder="Masukkan Judul Buku"
+                onkeypress="onchageUpdate()"
+              />
+              <p id="error-update-title" class="none">Masukkan Judul Buku</p>
+            </div>
+            <div class="item-form">
+              <label>Penulis</label>
+              <input
+                id="author-update"
+                class="input"
+                type="text"
+                onkeypress="onchageUpdate()"
+                placeholder="Masukkan Penulis Buku"
+              />
+              <p id="error-update-author" class="none">Masukkan Penulis Buku</p>
+            </div>
+            <div class="item-form">
+              <label>Tahun</label>
+              <input
+                id="year-update"
+                type="number"
+                class="input"
+                onkeypress="onchageUpdate()"
+                placeholder="Masukkan Tahun Penerbitan Buku"
+              />
+              <p id="error-update-year" class="none">
+                Masukkan Tahun Penerbitan
+              </p>
+            </div>
+            <div class="item-form">
+              <label>Selesai dibaca</label>
+              <input id="isCompleted-update" type="checkbox" />
+            </div>
+            <button id="save-update" class="save" type="button">Simpan</button>
+          </form>
+          <button id="cancel-update" class="cancel">Batal</button>
+        </div>
+      </div>
+    </div>
+    <div class="parental">
+      <div class="parent-fab">
+        <button id="btn-add">
+          <i class="fa-solid fa-plus fa-xl"></i>
+        </button>
+      </div>
+    </div>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/eventFunction.js"></script>
+    <script src="assets/js/crud.js"></script>
+    <script src="assets/js/utils.js"></script>
+  </body>
+</html>

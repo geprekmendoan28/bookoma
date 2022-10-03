@@ -1,0 +1,303 @@
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 500px;
+  width: 100%;
+  border-left: 1px solid #dedede;
+  border-right: 1px solid #dedede;
+  background: #fff;
+  min-height: 100vh;
+}
+.search-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid #999;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-top: 16px;
+}
+.wrapper-sec {
+  padding: 0px 16px;
+}
+.search-box i {
+  color: #999;
+}
+
+.search-box input {
+  border: none;
+  margin-left: 16px;
+  font-size: 16px;
+  outline: none;
+}
+
+.list-section {
+  margin-top: 24px;
+}
+
+.list-section h1 {
+  font-size: 18px;
+  color: #5dcde1;
+}
+
+.item-list {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #999;
+  padding: 16px;
+}
+.item-list .left {
+  width: 75%;
+}
+.item-list .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.item-list .right .fa-trash-can {
+  color: red;
+  cursor: pointer;
+}
+.item-list .right .fa-eye {
+  color: #5dcde1;
+  cursor: pointer;
+}
+.item-list .right .fa-pen-to-square {
+  color: #999;
+  cursor: pointer;
+}
+.item-list .content h5 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.item-list .content p {
+  font-size: 12px;
+  margin-top: 4px;
+}
+.item-list .status-not {
+  margin-top: 8px;
+  border-radius: 4px;
+  background: #999;
+  padding: 2px 4px;
+  width: fit-content;
+}
+.item-list .status-not p {
+  font-size: 12px;
+  color: #fff;
+}
+.item-list .status-yes {
+  margin-top: 8px;
+  border-radius: 4px;
+  background: #5dcde1;
+  padding: 2px 4px;
+  width: fit-content;
+}
+.item-list .status-yes p {
+  font-size: 12px;
+  color: #fff;
+}
+
+.parental {
+  display: flex;
+  justify-content: center;
+}
+.parent-fab {
+  position: fixed;
+  bottom: 16px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 16px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.parent-fab button {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background: #5dcde1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+.parent-fab button .fa-plus {
+  color: #fff;
+}
+
+.add-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-section .box {
+  background: #fff;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 16px;
+}
+.bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 100;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.add-section h1 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+.title-search {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+.add-section .item-form {
+  margin-bottom: 16px;
+  display: block;
+}
+.add-section .item-form label {
+  font-size: 16px;
+  font-weight: 600;
+}
+.add-section .item-form .input {
+  width: 100%;
+  outline: none;
+  border: 1px solid #999;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 12px;
+}
+.add-section .save {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  background: #5dcde1;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.add-section .cancel {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  background: #999;
+  color: #fff;
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.none {
+  display: none !important;
+}
+.visible {
+  display: block;
+}
+.add-section .item-form .error {
+  width: 100%;
+  outline: none;
+  border: 1px solid red;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 12px;
+}
+.error-p {
+  font-size: 12px;
+  color: red;
+  margin-top: 4px;
+}
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+}
+.empty-state img {
+  width: 200px;
+}
+.empty-state p {
+  font-size: 14px;
+  margin-top: 16px;
+  text-align: center;
+}
+#loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+#loading p {
+  font-size: 14px;
+  margin-top: 16px;
+  text-align: center;
+}
+.loader {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #5dcde1;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .add-section {
+    padding: 16px;
+  }
+}
