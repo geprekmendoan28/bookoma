@@ -7,4 +7,4 @@ HTML and vanila javascript
 A bookshelf appp for Dicoding idcamp javascript course submission    
    
  **Preview:**  
- <img src="/preview/preview.gif" alt="preview"/>
+ <img src="/preview.gif" alt="preview"/>
